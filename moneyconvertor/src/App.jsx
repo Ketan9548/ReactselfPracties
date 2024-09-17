@@ -1,33 +1,30 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { useEffect, useState } from 'react'
+import Change from './Components/Change'
+import CustomHook from './Hooks/Costemhook.js'
+import Calcy from './Components/Calcy.jsx';
+import Search from './Components/Search.jsx';
+import Input_output from './Components/Input_output.jsx';
 
 function App() {
-  const [count, setCount] = useState(0)
+  // let [data, setData] = useState([])
+  // let arr = []
+  // const currencyval = CustomHook("inr");
+  // const optionsval = Object.keys(currencyval);
+  // useEffect(() => {
+  //   setData(optionsval);
+  //   console.log(optionsval)
+  // }, [currencyval])
 
   return (
     <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+      {/* {data.map((value) => {
+        return (
+          arr.push(value)
+        )
+      })} */}
+      {/* <Calcy /> */}
+      {/* <Search /> */}
+      <Input_output />
     </>
   )
 }
