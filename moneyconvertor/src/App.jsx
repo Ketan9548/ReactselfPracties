@@ -1,9 +1,4 @@
-import { useEffect, useState } from 'react'
-import Change from './Components/Change'
-import CustomHook from './Hooks/Costemhook.js'
-import Calcy from './Components/Calcy.jsx';
-import Search from './Components/Search.jsx';
-import Input_output from './Components/Input_output.jsx';
+import { Form } from './Components/index.js'
 
 function App() {
   // let [data, setData] = useState([])
@@ -14,17 +9,10 @@ function App() {
   //   setData(optionsval);
   //   console.log(optionsval)
   // }, [currencyval])
-
+  const name = "kapil chauhan"
   return (
     <>
-      {/* {data.map((value) => {
-        return (
-          arr.push(value)
-        )
-      })} */}
-      {/* <Calcy /> */}
-      {/* <Search /> */}
-      <Input_output />
+      <Form />
     </>
   )
 }
