@@ -1,4 +1,4 @@
-import { Form } from './Components/index.js'
+import { Form, Snake } from './Components/index.js'
 
 function App() {
   // let [data, setData] = useState([])
@@ -12,7 +12,7 @@ function App() {
   const name = "kapil chauhan"
   return (
     <>
-      <Form />
+      <Snake />
     </>
   )
 }
