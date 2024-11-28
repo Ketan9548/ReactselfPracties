@@ -6,6 +6,9 @@ const SearchItem = () => {
     6775, 33, 65, 98, 24, 665, 343, 8665, 4343, 656, 454, 232, 6454, 7676764, 4,
     64, 4, 3, 5, 3, 8, 4, 4, 54, 3, 43, 3, 4,
   ];
+  const data2 = [
+    "sumit","Ketan","Rohit","Mandip","mayank","good","Better","luck","onemore"
+  ];
   const [searchdata, setSearchdata] = useState("");
   const [data, setdata] = useState("");
 
@@ -14,23 +17,30 @@ const SearchItem = () => {
     if (data1.includes(val)) {
       setdata(val);
     } else {
-      setdata("Not Found");
+      setdata(<h1>Not Found</h1>);
     }
   };
+
+  const findvaluestr = () =>{
+    let value = String(searchdata.toLowerCase());
+    data2.filter((words)=> words.toLowerCase() === value?setdata(words):setdata("Not Found"))
+  }
   return (
     <>
       <p>Search element</p>
       <input
-        type="number"
+        type="text"
         value={searchdata}
         placeholder="Search...."
         onChange={(e) => setSearchdata(e.target.value)}
       />
-      <button onClick={findvalue}>Search</button>
+      {/* <button onClick={findvalue}>Search</button> */}
+      <button onClick={findvaluestr}>Search</button>
       <div>
-        <p>Value is {data?data:"?"} present in data</p>
+        <p>Value is {data ? data : "?"} present in data</p>
       </div>
-      {data1.map((val, index) => (
+      <p>--------------------------</p>
+      {data2.map((val, index) => (
         <>
           <p key={index}>{val}</p>
         </>
