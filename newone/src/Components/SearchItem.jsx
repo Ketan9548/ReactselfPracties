@@ -7,24 +7,37 @@ const SearchItem = () => {
     64, 4, 3, 5, 3, 8, 4, 4, 54, 3, 43, 3, 4,
   ];
   const data2 = [
-    "sumit","Ketan","Rohit","Mandip","mayank","good","Better","luck","onemore"
+    "sumit",
+    "Ketan",
+    "Rohit",
+    "Mandip",
+    "mayank",
+    "good",
+    "Better",
+    "luck",
+    "onemore",
   ];
   const [searchdata, setSearchdata] = useState("");
   const [data, setdata] = useState("");
 
-  const findvalue = () => {
-    let val = Number(searchdata);
-    if (data1.includes(val)) {
-      setdata(val);
+  // const findvalue = () => {
+  //   let val = Number(searchdata);
+  //   if (data1.includes(val)) {
+  //     setdata(val);
+  //   } else {
+  //     setdata(<h1>Not Found</h1>);
+  //   }
+  // };
+
+  const findvaluestr = () => {
+    let value = String(searchdata.toLowerCase());
+    let fount = data2.find((word) => word.toLowerCase() === value);
+    if (fount) {
+      setdata(fount);
     } else {
-      setdata(<h1>Not Found</h1>);
+      setdata("Not Found");
     }
   };
-
-  const findvaluestr = () =>{
-    let value = String(searchdata.toLowerCase());
-    data2.filter((words)=> words.toLowerCase() === value?setdata(words):setdata("Not Found"))
-  }
   return (
     <>
       <p>Search element</p>
