@@ -1,10 +1,11 @@
 import "./App.css";
-import SearchItem from "./Components/SearchItem";
-
+import Showname from "./Components/Showname";
+import Sliderbar from "./Components/Sliderbar";
 function App() {
   return (
     <>
-      <SearchItem />
+      <Showname />
+      <Sliderbar />
     </>
   );
 }
